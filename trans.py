@@ -3,7 +3,7 @@ import re
 
 # Read file xlsx and save to json
 import pandas as pd
-df = pd.read_excel('D:\\Upwork\\anime_style\\anime_style.xlsx')
+df = pd.read_excel('D:\\Upwork\\cute_animal_design\\cute_animal_design.xlsx')
 df.to_json('output.json', orient='records', lines=True)
 
 # Load the JSON data from the file
