@@ -13,7 +13,7 @@ with open(json_file_path, mode='r', encoding='utf-8') as json_file:
 prompts = [item['Prompt'] for item in data if 'Prompt' in item]
 
 # Initialize a counter to keep track of the current prompt
-current_prompt_index = 46
+current_prompt_index = 105
 
 # Flag to track the paused state
 paused = True  # Start in a paused state
@@ -26,6 +26,8 @@ def copy_next_prompt():
         current_prompt_index += 1
     else:
         print("No more prompts to copy.")
+        # stop the program
+        
 
 def press_key_sequence():
     global paused
@@ -40,7 +42,7 @@ def press_key_sequence():
     else:
         print("Script is paused.")
     # Schedule the function to run again after 2 minutes
-    threading.Timer(150, press_key_sequence).start()  # 120 seconds = 2 minutes
+    threading.Timer(130, press_key_sequence).start()  # 120 seconds = 2 minutes
 
 def toggle_pause():
     global paused

@@ -3,12 +3,12 @@ import re
 
 # Read file xlsx and save to json
 import pandas as pd
-df = pd.read_excel('D:\\Upwork\\cute_animal_design\\cute_animal_design.xlsx')
-df.to_json('output.json', orient='records', lines=True)
+df = pd.read_excel('poster_designs\\poster_designs.xlsx')
+df.to_json('output2.json', orient='records', lines=True)
 
 # Load the JSON data from the file
 
-json_file_path = 'output.json'
+json_file_path = 'output2.json'
 
 data = []
 with open(json_file_path, mode='r', encoding='utf-8') as json_file:
@@ -32,7 +32,7 @@ with open(json_file_path, mode='w', encoding='utf-8') as json_file:
     json.dump(data, json_file, indent=4, ensure_ascii=False)
     
 # Load the JSON data from the file
-json_file_path = 'output.json'
+json_file_path = 'output2.json'
 
 with open(json_file_path, mode='r', encoding='utf-8') as json_file:
     data = json.load(json_file)
